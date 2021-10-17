@@ -2,6 +2,18 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.9.
 
+## NGXS Installation
+
+* `npm i @angular-ru/{cdk,ngxs}`
+* `npm i @ngxs/store`
+* `npm install @ngxs/logger-plugin`
+* `npm install @ngxs/devtools-plugin --save-dev`
+* Create a state class
+* Import NgxsModule into AppModule and list states `NgxsModule.forRoot([CountState])`
+* Import `NgxsDataPluginModule.forRoot()` in AppModule
+* Import `NgxsReduxDevtoolsPluginModule.forRoot()` in AppModule
+* Inject state into component `constructor(public counter: CountState) {}`
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
